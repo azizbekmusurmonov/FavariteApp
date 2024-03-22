@@ -7,14 +7,17 @@
 
 import UIKit
 
-final class CardView: UIView {
-        
+final class FavoriteView: UIView {
+    
     lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        let collectionView = UICollectionView(frame: .zero,
+                                              collectionViewLayout: createLayout())
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        collectionView.register(FavoriteViewCell.self, forCellWithReuseIdentifier: "favoriteViewCell")
+        collectionView.register(UICollectionViewCell.self, 
+                                forCellWithReuseIdentifier: "cell")
+        collectionView.register(TagCell.self, forCellWithReuseIdentifier: "tagCell")
+        collectionView.register(ShopCell.self, forCellWithReuseIdentifier: "shopCell")
         
         return collectionView
     }()
@@ -35,22 +38,74 @@ final class CardView: UIView {
             layoutEnvironment: NSCollectionLayoutEnvironment
         ) -> NSCollectionLayoutSection? in
             
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                                  heightDimension: .fractionalHeight(1))
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            guard let sectionType = SectionType(rawValue: sectionIndex) 
+            else { return nil }
             
-            let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(140),
-                                                   heightDimension: .absolute(80))
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+            switch sectionType {
+                
+            case .tags:
+                
+                let itemSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1),
+                    heightDimension: .fractionalHeight(1))
+                
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(100),
+                                                       heightDimension: .absolute(30))
+                let group = NSCollectionLayoutGroup.horizontal(
+                    layoutSize: groupSize,
+                    subitems: [item])
+                
+                let section = NSCollectionLayoutSection(group: group)
+                section.orthogonalScrollingBehavior = .continuous
+                section.interGroupSpacing = 8
+                section.contentInsets = .init(
+                        top: 0,
+                        leading: 10,
+                        bottom: 0,
+                        trailing: 10
+                )
+                
+                return section
+            case .shop:
+                
+                let itemSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(0.5),
+                    heightDimension: .fractionalHeight(1.6))
+                
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+                let item2 = NSCollectionLayoutItem(layoutSize: itemSize)
+                item.contentInsets = .init(
+                    top: 50,
+                    leading: 0,
+                    bottom: 100,
+                    trailing: 8
+                )
+                item2.contentInsets = .init(
+                    top: 50,
+                    leading: 8,
+                    bottom: 100,
+                    trailing: 0)
+                
+                let groupSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1.0),
+                    heightDimension: .absolute(281))
+                
+                let group = NSCollectionLayoutGroup.horizontal(
+                    layoutSize: groupSize,
+                    subitems: [item, item2])
             
-            let section = NSCollectionLayoutSection(group: group)
-            section.interGroupSpacing = 10
-            section.orthogonalScrollingBehavior = .continuous
-//            section.contentInsets = .init(top: 10, leading: 10, bottom: 40, trailing: 10)
-            
-//            let supplementarySize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-//                                                           heightDimension: .absolute(40))
-            return section
+                let section = NSCollectionLayoutSection(group: group)
+                section.interGroupSpacing = 8
+                section.contentInsets = .init(
+                    top: 10,
+                    leading: 16,
+                    bottom: 10,
+                    trailing: 16)
+                return section
+                
+            }
         }
     }
     
@@ -64,20 +119,5 @@ final class CardView: UIView {
             collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-    }
-    
-    @objc private func segmentedControlChanged(_ sender: UISegmentedControl) {
-        guard let itemType = MyCardType(rawValue: sender.selectedSegmentIndex) else { return }
-        
-        switch itemType {
-        case .allCard:
-            print("All card")
-        case .uzCard:
-            print("select uzcard")
-        case .humoCard:
-            print("select humoCard")
-        case .mpk:
-            print("select mpk")
-        }
     }
 }

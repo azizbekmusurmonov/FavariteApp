@@ -7,16 +7,9 @@
 
 import UIKit
 
-enum MyCardType: Int, CaseIterable {
-    case allCard
-    case uzCard
-    case humoCard
-    case mpk
-}
-
 final class FavoriteViewController: UIViewController {
     
-    private let cardView = CardView()
+    private let cardView = FavoriteView()
     private let presenter: CardPresenter
     
     init() {
@@ -52,6 +45,8 @@ extension FavoriteViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         presenter.cellForItem(collectionView, at: indexPath)
     }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int { 2 }
 }
 
 extension FavoriteViewController {
@@ -73,3 +68,4 @@ extension FavoriteViewController {
         
     }
 }
+

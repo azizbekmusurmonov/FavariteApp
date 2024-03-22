@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		FAD9A4D12BAC66BE00DFC2FA /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4CF2BAC66BD00DFC2FA /* Constraint.swift */; };
 		FAD9A4D22BAC66BE00DFC2FA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4D02BAC66BE00DFC2FA /* Color.swift */; };
-		FAD9A4DA2BAC66E600DFC2FA /* FavoriteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4D62BAC66E600DFC2FA /* FavoriteViewCell.swift */; };
+		FAD9A4DA2BAC66E600DFC2FA /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4D62BAC66E600DFC2FA /* TagCell.swift */; };
 		FAD9A4DB2BAC66E600DFC2FA /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4D72BAC66E600DFC2FA /* FavoriteView.swift */; };
 		FAD9A4DC2BAC66E600DFC2FA /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4D82BAC66E600DFC2FA /* FavoriteViewController.swift */; };
 		FAD9A4DD2BAC66E600DFC2FA /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4D92BAC66E600DFC2FA /* FavoritePresenter.swift */; };
+		FAD9A4E02BACAA7D00DFC2FA /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4DF2BACAA7D00DFC2FA /* Types.swift */; };
+		FAD9A4E22BACAE5100DFC2FA /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4E12BACAE5100DFC2FA /* ShopCell.swift */; };
+		FAD9A4E52BADAF8C00DFC2FA /* TagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4E42BADAF8C00DFC2FA /* TagModel.swift */; };
+		FAD9A4E72BADAF9500DFC2FA /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4E62BADAF9500DFC2FA /* ShopModel.swift */; };
+		FAD9A4E92BADAFF200DFC2FA /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9A4E82BADAFF200DFC2FA /* FavoriteModel.swift */; };
 		FAE779FB2BA9A2FA0095E78B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE779FA2BA9A2FA0095E78B /* AppDelegate.swift */; };
 		FAE77A042BA9A2FC0095E78B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE77A032BA9A2FC0095E78B /* Assets.xcassets */; };
 		FAE77A072BA9A2FC0095E78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE77A052BA9A2FC0095E78B /* LaunchScreen.storyboard */; };
@@ -21,10 +26,15 @@
 /* Begin PBXFileReference section */
 		FAD9A4CF2BAC66BD00DFC2FA /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		FAD9A4D02BAC66BE00DFC2FA /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		FAD9A4D62BAC66E600DFC2FA /* FavoriteViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewCell.swift; sourceTree = "<group>"; };
+		FAD9A4D62BAC66E600DFC2FA /* TagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		FAD9A4D72BAC66E600DFC2FA /* FavoriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		FAD9A4D82BAC66E600DFC2FA /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		FAD9A4D92BAC66E600DFC2FA /* FavoritePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
+		FAD9A4DF2BACAA7D00DFC2FA /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		FAD9A4E12BACAE5100DFC2FA /* ShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
+		FAD9A4E42BADAF8C00DFC2FA /* TagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModel.swift; sourceTree = "<group>"; };
+		FAD9A4E62BADAF9500DFC2FA /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
+		FAD9A4E82BADAFF200DFC2FA /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
 		FAE779F72BA9A2FA0095E78B /* Favorite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Favorite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE779FA2BA9A2FA0095E78B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE77A032BA9A2FC0095E78B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,9 +84,28 @@
 		FAD9A4D52BAC66E600DFC2FA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				FAD9A4D62BAC66E600DFC2FA /* FavoriteViewCell.swift */,
+				FAD9A4D62BAC66E600DFC2FA /* TagCell.swift */,
+				FAD9A4E12BACAE5100DFC2FA /* ShopCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAD9A4DE2BACAA4E00DFC2FA /* TypesEnum */ = {
+			isa = PBXGroup;
+			children = (
+				FAD9A4DF2BACAA7D00DFC2FA /* Types.swift */,
+			);
+			path = TypesEnum;
+			sourceTree = "<group>";
+		};
+		FAD9A4E32BADAF7A00DFC2FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAD9A4E42BADAF8C00DFC2FA /* TagModel.swift */,
+				FAD9A4E62BADAF9500DFC2FA /* ShopModel.swift */,
+				FAD9A4E82BADAFF200DFC2FA /* FavoriteModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FAE779EE2BA9A2FA0095E78B = {
@@ -98,7 +127,9 @@
 		FAE779F92BA9A2FA0095E78B /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				FAD9A4E32BADAF7A00DFC2FA /* Models */,
 				FAD9A4D32BAC66CA00DFC2FA /* Base */,
+				FAD9A4DE2BACAA4E00DFC2FA /* TypesEnum */,
 				FAD9A4CE2BAC66BD00DFC2FA /* Extension */,
 				FAD9A4D42BAC66E600DFC2FA /* FavoriteViewController */,
 				FAE77A032BA9A2FC0095E78B /* Assets.xcassets */,
@@ -179,8 +210,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD9A4D12BAC66BE00DFC2FA /* Constraint.swift in Sources */,
-				FAD9A4DA2BAC66E600DFC2FA /* FavoriteViewCell.swift in Sources */,
+				FAD9A4E22BACAE5100DFC2FA /* ShopCell.swift in Sources */,
+				FAD9A4E52BADAF8C00DFC2FA /* TagModel.swift in Sources */,
+				FAD9A4E92BADAFF200DFC2FA /* FavoriteModel.swift in Sources */,
+				FAD9A4DA2BAC66E600DFC2FA /* TagCell.swift in Sources */,
 				FAD9A4DD2BAC66E600DFC2FA /* FavoritePresenter.swift in Sources */,
+				FAD9A4E02BACAA7D00DFC2FA /* Types.swift in Sources */,
+				FAD9A4E72BADAF9500DFC2FA /* ShopModel.swift in Sources */,
 				FAD9A4D22BAC66BE00DFC2FA /* Color.swift in Sources */,
 				FAD9A4DC2BAC66E600DFC2FA /* FavoriteViewController.swift in Sources */,
 				FAD9A4DB2BAC66E600DFC2FA /* FavoriteView.swift in Sources */,
